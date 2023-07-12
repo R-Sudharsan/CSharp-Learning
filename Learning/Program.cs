@@ -21,7 +21,16 @@ namespace Learning
             // Call the method defined in IMethod
             icClass.IMethod();
 
-            Console.ReadLine();
+            GenericClass<string> genObj1 = new GenericClass<string>("Hello");
+
+            // Call the method defined in GenericClass
+            genObj1.GMethod();
+
+            // Create an instance of GenericClass with int as the type argument
+            GenericClass<int> genObj2 = new GenericClass<int>(42);
+
+            // Call the method defined in GenericClass
+            genObj2.GMethod();
         }
     }
 
@@ -92,6 +101,22 @@ namespace Learning
         public void IMethod()
         {
             Console.WriteLine("IMethod implementation in InterfaceCheckClass");
+        }
+    }
+
+    public class GenericClass<T>
+    {
+        private T value;
+
+        public GenericClass(T value)
+        {
+            this.value = value;
+        }
+
+        public void GMethod()
+        {
+            Console.WriteLine("GMethod implementation in GenericClass");
+            Console.WriteLine("Value: " + value);
         }
     }
 }
