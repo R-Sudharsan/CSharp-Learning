@@ -1,0 +1,14 @@
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\bin\Debug\netcoreapp3.1\Learning.exe
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\bin\Debug\netcoreapp3.1\Learning.deps.json
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\bin\Debug\netcoreapp3.1\Learning.runtimeconfig.json
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\bin\Debug\netcoreapp3.1\Learning.runtimeconfig.dev.json
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\bin\Debug\netcoreapp3.1\Learning.dll
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\bin\Debug\netcoreapp3.1\Learning.pdb
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.csproj.AssemblyReference.cache
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.AssemblyInfoInputs.cache
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.AssemblyInfo.cs
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.csproj.CoreCompileInputs.cache
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.dll
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.pdb
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.genruntimeconfig.cache

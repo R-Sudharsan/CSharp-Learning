@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QsV6LGMvMWibVpub5WwdZIvtakW8YCcbzE+G1PiwY7pQgFKbw/I3vJxKGBqpOzBXH4Celq0Pm/HdacxdxV7Tkg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Work\\Desktop\\CloudCon\\C# Projects\\CSharp-Learning\\Learning\\Learning.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Work\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}
