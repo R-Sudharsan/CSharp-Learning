@@ -12,3 +12,5 @@ C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\ne
 C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.dll
 C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.pdb
 C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.genruntimeconfig.cache
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Work\Desktop\CloudCon\C# Projects\CSharp-Learning\Learning\obj\Debug\netcoreapp3.1\Learning.csproj.CopyComplete

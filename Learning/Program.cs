@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Text.Json;
+using System.Threading.Tasks;
+using System.Net.Http;
+
 
 namespace Learning
 {
@@ -31,92 +35,120 @@ namespace Learning
 
             // Call the method defined in GenericClass
             genObj2.GMethod();
-        }
-    }
 
-    public class MethodsCollection
-    {
-        public void VariableLearning()
-        {
-            // Variable code
-            int number = 5;
-            string name = "John Doe";
-            bool isTrue = true;
-
-            Console.WriteLine("Number: " + number);
-            Console.WriteLine("Name: " + name);
-            Console.WriteLine("IsTrue: " + isTrue);
+            RunAsync().GetAwaiter().GetResult();
+            
         }
 
-        public void Loops()
+        public class MethodsCollection
         {
-            // Loop code
-            Console.WriteLine("For Loop:");
-            for (int i = 1; i <= 5; i++)
+            public void VariableLearning()
             {
-                Console.WriteLine("Iteration: " + i);
-            }
-            Console.WriteLine();
+                // Variable code
+                int number = 5;
+                string name = "John Doe";
+                bool isTrue = true;
 
-            Console.WriteLine("While Loop:");
-            int counter = 0;
-            while (counter < 5)
+                Console.WriteLine("Number: " + number);
+                Console.WriteLine("Name: " + name);
+                Console.WriteLine("IsTrue: " + isTrue);
+            }
+
+            public void Loops()
             {
-                Console.WriteLine("Counter: " + counter);
-                counter++;
-            }
-            Console.WriteLine();
-        }
+                // Loop code
+                Console.WriteLine("For Loop:");
+                for (int i = 1; i <= 5; i++)
+                {
+                    Console.WriteLine("Iteration: " + i);
+                }
+                Console.WriteLine();
 
-        public void SwitchCaseExample()
-        {
-            // Switch case
-            Console.WriteLine("Switch Case Example:");
-            int option = 2;
-            switch (option)
+                Console.WriteLine("While Loop:");
+                int counter = 0;
+                while (counter < 5)
+                {
+                    Console.WriteLine("Counter: " + counter);
+                    counter++;
+                }
+                Console.WriteLine();
+            }
+
+            public void SwitchCaseExample()
             {
-                case 1:
-                    Console.WriteLine("Option 1 selected");
-                    break;
-                case 2:
-                    Console.WriteLine("Option 2 selected");
-                    break;
-                case 3:
-                    Console.WriteLine("Option 3 selected");
-                    break;
-                default:
-                    Console.WriteLine("Invalid option");
-                    break;
+                // Switch case
+                Console.WriteLine("Switch Case Example:");
+                int option = 2;
+                switch (option)
+                {
+                    case 1:
+                        Console.WriteLine("Option 1 selected");
+                        break;
+                    case 2:
+                        Console.WriteLine("Option 2 selected");
+                        break;
+                    case 3:
+                        Console.WriteLine("Option 3 selected");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid option");
+                        break;
+                }
+            }
+        }
+
+        public interface SampleInterface
+        {
+            void IMethod();
+        }
+
+        public class InterfaceCheckClass : SampleInterface
+        {
+            public void IMethod()
+            {
+                Console.WriteLine("IMethod implementation in InterfaceCheckClass");
+            }
+        }
+
+        public class GenericClass<T>
+        {
+            private T value;
+
+            public GenericClass(T value)
+            {
+                this.value = value;
+            }
+
+            public void GMethod()
+            {
+                Console.WriteLine("GMethod implementation in GenericClass");
+                Console.WriteLine("Value: " + value);
+            }
+        }
+
+        // HTTP API
+        static async Task RunAsync()
+        {
+            try
+            { 
+                String url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+                HttpClient client = new HttpClient();
+                var response = await client.GetAsync(url);
+                var readStringResponse = await response.Content.ReadAsStringAsync();
+                CoinModel coinModel = JsonSerializer.Deserialize<CoinModel>(readStringResponse);
+                if (coinModel.Bpi != null && coinModel.Bpi.USD != null)
+                {
+                    Console.WriteLine("\nCoin Price Table\n\nCurrency\tPrice\n----------------------------\n"+$"USD\t\t{coinModel.Bpi.USD.RateFloat}\n----------------------------");
+                }
+                else
+                {
+                    Console.WriteLine("Bpi or USD property is null.");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
     }
-
-    public interface SampleInterface
-    {
-        void IMethod();
     }
-
-    public class InterfaceCheckClass : SampleInterface
-    {
-        public void IMethod()
-        {
-            Console.WriteLine("IMethod implementation in InterfaceCheckClass");
-        }
-    }
-
-    public class GenericClass<T>
-    {
-        private T value;
-
-        public GenericClass(T value)
-        {
-            this.value = value;
-        }
-
-        public void GMethod()
-        {
-            Console.WriteLine("GMethod implementation in GenericClass");
-            Console.WriteLine("Value: " + value);
-        }
-    }
-}
